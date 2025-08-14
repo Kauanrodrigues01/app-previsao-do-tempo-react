@@ -1,14 +1,22 @@
-import './WeatherInformations.css';
+import React from "react";
+import "./WeatherInformations.css";
+import { capitalize } from "./capitalize";
 
-function WeatherInformations({ weatherInfo, err }) {
-  function capitalize(str) {
-    if (!str) return '';
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-  }
-
+const WeatherInformations = React.memo(function WeatherInformations({
+  weatherInfo,
+  err,
+}) {
   return (
-    <div className="weather-container">
-      {err && <p className="weather-error">{err}</p>}
+    <div
+      className="weather-container"
+      role="region"
+      aria-label="Informações do clima atual"
+    >
+      {err && (
+        <p className="weather-error" role="alert">
+          {err}
+        </p>
+      )}
 
       {weatherInfo && (
         <div className="weather-card">
@@ -20,7 +28,10 @@ function WeatherInformations({ weatherInfo, err }) {
             <img
               className="weather-icon"
               src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`}
-              alt={weatherInfo.weather[0].description}
+              alt={`Ícone do clima: ${weatherInfo.weather[0].description}`}
+              title={weatherInfo.weather[0].description}
+              width={60}
+              height={60}
             />
             <p className="weather-temp">{weatherInfo.main.temp}°C</p>
           </div>
@@ -38,6 +49,6 @@ function WeatherInformations({ weatherInfo, err }) {
       )}
     </div>
   );
-}
+});
 
 export default WeatherInformations;

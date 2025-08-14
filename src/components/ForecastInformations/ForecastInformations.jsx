@@ -1,19 +1,27 @@
+import React from "react";
 import './ForecastInformations.css';
+import { useWeekday } from "./useWeekday";
 
-const ForecastInformations = ({ forecastInfo, err }) => {
+const ForecastInformations = React.memo(function ForecastInformations({
+  forecastInfo,
+  err,
+}) {
+  const getWeekFromTimeStamp = useWeekday();
   const days = forecastInfo?.list.filter((day) =>
-    day.dt_txt.includes('12:00:00')
+    day.dt_txt.includes("12:00:00")
   );
 
-  function getWeekFromTimeStamp(timestamp) {
-    const date = new Date(timestamp * 1000);
-    const weekDay = date.toLocaleDateString('pt-BR', { weekday: 'short', day: 'numeric' });
-    return weekDay;
-  }
-
   return (
-    <div className="forecast-container">
-      {err && <p className="weather-error">{err}</p>}
+    <div
+      className="forecast-container"
+      role="region"
+      aria-label="Previsão do tempo para os próximos 5 dias"
+    >
+      {err && (
+        <p className="weather-error" role="alert">
+          {err}
+        </p>
+      )}
 
       {forecastInfo && days?.length > 0 && (
         <div className="forecast-card">
@@ -24,7 +32,10 @@ const ForecastInformations = ({ forecastInfo, err }) => {
                 <p>{getWeekFromTimeStamp(day.dt)}</p>
                 <img
                   src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
-                  alt={day.weather[0].description}
+                  alt={`Ícone de clima: ${day.weather[0].description}`}
+                  title={day.weather[0].description}
+                  width={50}
+                  height={50}
                 />
                 <p>{Math.round(day.main.temp)}°C</p>
                 <p>{day.weather[0].description}</p>
@@ -35,6 +46,6 @@ const ForecastInformations = ({ forecastInfo, err }) => {
       )}
     </div>
   );
-};
+});
 
 export default ForecastInformations;
