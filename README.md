@@ -1,12 +1,62 @@
-# React + Vite
+# App Previsão do Tempo ☀️🌧️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto simples em React para consultar a previsão do tempo atual e dos próximos 5 dias de qualquer cidade, utilizando a API OpenWeatherMap.
 
-Currently, two official plugins are available:
+## Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Demonstração do app](./public/demostracao-do-app.png)
 
-## Expanding the ESLint configuration
+## Funcionalidades
+- Busca por cidade
+- Exibe informações do clima atual (temperatura, sensação térmica, umidade, pressão, descrição e ícone)
+- Exibe previsão para os próximos 5 dias
+- Mensagens de erro amigáveis
+- Interface responsiva e acessível
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologias Utilizadas
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Axios](https://axios-http.com/)
+- [OpenWeatherMap API](https://openweathermap.org/api)
+
+## Como rodar o projeto
+
+1. **Clone o repositório:**
+	```bash
+	git clone https://github.com/Kauanrodrigues01/app-previsao-do-tempo-react.git
+	cd app-previsao-do-tempo-react
+	```
+
+2. **Instale as dependências:**
+	```bash
+	npm install
+	```
+
+3. **Configure a chave da API:**
+	- Crie um arquivo `.env` na raiz do projeto com o conteúdo:
+	  ```env
+	  VITE_API_KEY=SuaChaveDaAPI
+	  ```
+	- Você pode obter uma chave gratuita em [OpenWeatherMap](https://openweathermap.org/api).
+
+4. **Inicie o projeto:**
+	```bash
+	npm run dev
+	```
+	O app estará disponível em `http://localhost:5173`.
+
+## Estrutura de Pastas
+```
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── ForecastInformations/
+│   │   └── WeatherInformations/
+│   ├── App.jsx
+│   └── main.jsx
+├── .env
+├── package.json
+└── README.md
+```
+---
