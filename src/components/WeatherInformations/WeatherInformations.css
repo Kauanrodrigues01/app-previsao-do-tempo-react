@@ -1,0 +1,50 @@
+.weather-container {
+  margin-top: 20px;
+}
+
+.weather-error {
+  color: red;
+}
+
+.weather-card {
+  margin-top: 20px;
+  padding: 15px 0 30px 0;
+  background-color: #D3EBF3;
+  border-radius: 10px;
+}
+
+.weather-location {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  size: 3rem;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.weather-description {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  margin-top: 10px;
+}
