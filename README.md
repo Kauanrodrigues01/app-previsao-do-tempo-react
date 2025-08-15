@@ -1,6 +1,18 @@
+<div align="center">
+	<h1>App Previsão do Tempo ☀️🌧️</h1>
+	<p>
+		<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
+		<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+		<img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white" alt="Axios"/>
+		<img src="https://img.shields.io/badge/OpenWeatherMap-FFB300?style=for-the-badge&logo=OpenWeatherMap&logoColor=white" alt="OpenWeatherMap"/>
+		<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+		<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+	</p>
+</div>
+
 # App Previsão do Tempo ☀️🌧️
 
-Este é um projeto simples em React para consultar a previsão do tempo atual e dos próximos 5 dias de qualquer cidade, utilizando a API OpenWeatherMap.
+Este é um projeto simples em React, feito por mim para colocar em prática conceitos e funcionalidades básicas que foram estudadas até o momento. Ele consulta a previsão do tempo atual e dos próximos 5 dias de qualquer cidade, utilizando a API OpenWeatherMap.
 
 ## Demonstração
 
