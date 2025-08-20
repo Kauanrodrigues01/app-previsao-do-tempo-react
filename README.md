@@ -36,7 +36,7 @@ Este é um projeto simples em React, feito por mim para colocar em prática conc
 
 1. **Clone o repositório:**
 	```bash
-	git clone https://github.com/Kauanrodrigues01/app-previsao-do-tempo-react.git
+	https://github.com/Kauanrodrigues01/app-previsao-do-tempo-react.git
 	cd app-previsao-do-tempo-react
 	```
 
